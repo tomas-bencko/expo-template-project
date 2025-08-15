@@ -2,6 +2,7 @@
 // since React Native lacks some web standards MSW depends on,
 // and official support for React Native is under development.
 
+/* eslint-disable max-classes-per-file */
 import 'fast-text-encoding';
 import 'react-native-url-polyfill/auto';
 
@@ -25,8 +26,13 @@ if (!global.Event) {
       this.defaultPrevented = true;
     }
 
-    stopPropagation() { }
-    stopImmediatePropagation() { }
+    stopPropagation() {
+      this.stopPropagation();
+    }
+
+    stopImmediatePropagation() {
+      this.stopPropagation();
+    }
   };
 }
 

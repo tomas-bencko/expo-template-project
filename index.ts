@@ -1,6 +1,6 @@
 import { registerRootComponent } from 'expo';
 
-import App from './App';
+import { App } from './App';
 
 async function enableMocking() {
   if (!__DEV__) {

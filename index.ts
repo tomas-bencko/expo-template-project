@@ -7,7 +7,7 @@ async function enableMocking() {
     return;
   }
 
-  await import('./msw.polyfills');
+  await import('./src/mocks/msw.polyfills');
   const { server } = await import('./src/mocks/server');
   server.listen();
 }

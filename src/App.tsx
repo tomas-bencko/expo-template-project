@@ -1,27 +1,22 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { useFonts } from 'expo-font';
+import { useFonts, Roboto_400Regular, Roboto_700Bold, Roboto_500Medium } from '@expo-google-fonts/roboto';
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 import './styles/global.css';
 
 export function App() {
-  const [loaded] = useFonts({
-    // eslint-disable-next-line global-require
-    RobotoRegular: require('../assets/fonts/roboto-regular.ttf'),
-    // eslint-disable-next-line global-require
-    RobotoBold: require('../assets/fonts/roboto-bold.ttf'),
-    // eslint-disable-next-line global-require
-    RobotoThin: require('../assets/fonts/roboto-thin.ttf'),
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold,
   });
 
-  if (!loaded) return null;
+  if (!fontsLoaded) return <Text>There was a problem loading fonts</Text>;
 
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-4xl color-green-400">This is Roboto Regular (default)</Text>
-      <Text className="font-roboto text-4xl color-orange-600">This is Roboto Regular (default)</Text>
-      <Text className="font-bold text-5xl color-blue-700">This is Roboto Bold</Text>
-      <Text className="font-thin text-5xl color-red-900">This is Roboto Thin</Text>
+      <Text className="font-roboto text-5xl color-blue-700">This is Roboto Regular</Text>
+      <Text className="font-roboto-medium text-5xl color-blue-700">This is Roboto Medium</Text>
+      <Text className="font-roboto-bold text-5xl color-blue-700">This is Roboto Bold</Text>
       <StatusBar style="auto" />
     </View>
   );

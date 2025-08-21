@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line @typescript-eslint/no-require-imports,import/no-extraneous-dependencies
-const { fontFamily } = require('tailwindcss/defaultTheme');
-
 module.exports = {
   content: ['./App.tsx', './src/**/*.{js,jsx,ts,tsx}'],
   // eslint-disable-next-line @typescript-eslint/no-require-imports, global-require
@@ -9,21 +6,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['RobotoRegular', ...fontFamily.sans],
+        roboto: ['Roboto_400Regular'],
+        'roboto-medium': ['Roboto_500Medium'],
+        'roboto-bold': ['Roboto_700Bold'],
       },
       lineHeight: {
         normal: 1.5,
       },
-      fontWeight: {
-        thin: '100',
-        light: '300',
-        normal: '400',
-        medium: '500',
-        bold: '700',
-        black: '900',
-      },
       fontSize: {
-        '4xl': '1.625rem', // 26px / 32px
+        '5xl': '1.625rem', // 26px
+        '4xl': '1.5', // 24px
         '3xl': '1.375rem', // 22px
         '2xl': '1.25rem', // 20px
         xl: '1.125rem', // 18px

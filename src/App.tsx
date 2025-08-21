@@ -1,7 +1,9 @@
 // eslint-disable-next-line camelcase
 import { useFonts, Roboto_400Regular, Roboto_700Bold, Roboto_500Medium } from '@expo-google-fonts/roboto';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+
+import { Text } from './components/primitives/Text';
 import './styles/global.css';
 
 export function App() {
@@ -18,9 +20,15 @@ export function App() {
 
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="font-roboto text-5xl color-blue-700">This is Roboto Regular</Text>
-      <Text className="font-roboto-medium text-5xl color-blue-700">This is Roboto Medium</Text>
-      <Text className="font-roboto-bold text-5xl color-blue-700">This is Roboto Bold</Text>
+      <Text size="lg" color="blue-700">
+        This is Roboto Regular
+      </Text>
+      <Text size="lg" weight="medium" color="blue-700">
+        This is Roboto Medium
+      </Text>
+      <Text size="lg" weight="bold" color="blue-700">
+        This is Roboto Bold
+      </Text>
       <StatusBar style="auto" />
     </View>
   );

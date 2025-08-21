@@ -1,3 +1,4 @@
+// eslint-disable-next-line camelcase
 import { useFonts, Roboto_400Regular, Roboto_700Bold, Roboto_500Medium } from '@expo-google-fonts/roboto';
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
@@ -5,8 +6,11 @@ import './styles/global.css';
 
 export function App() {
   const [fontsLoaded] = useFonts({
+    // eslint-disable-next-line camelcase
     Roboto_400Regular,
+    // eslint-disable-next-line camelcase
     Roboto_500Medium,
+    // eslint-disable-next-line camelcase
     Roboto_700Bold,
   });
 
